@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8aad1c6c-c905-4b2c-9157-b4088793ace1" name="Default Changelist" comment="" />
+    <list default="true" id="8aad1c6c-c905-4b2c-9157-b4088793ace1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +20,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
@@ -26,6 +36,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1YorXgJWv7axRB5i44jpbetIjHD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -33,29 +44,66 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
-  <component name="RunManager" selected="npm.prebuild">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
+        <script value="clean" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="prebuild" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="copy-assets" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="prebuild" />
+        <script value="copy-assets" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="tsc" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="tsc" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -63,8 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.prebuild" />
-        <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.tsc" />
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.copy-assets" />
+        <item itemvalue="npm.clean" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583619828807</updated>
-      <workItem from="1583619830717" duration="735000" />
+      <workItem from="1583619830717" duration="2420000" />
     </task>
     <servers />
   </component>
@@ -103,21 +154,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1218" height="163" key="GridCell.Tab.0.bottom" timestamp="1583620371947">
+    <state width="1218" height="163" key="GridCell.Tab.0.bottom" timestamp="1583623010022">
       <screen x="0" y="23" width="1280" height="713" />
     </state>
-    <state width="1218" height="163" key="GridCell.Tab.0.bottom/0.23.1280.713@0.23.1280.713" timestamp="1583620371947" />
-    <state width="1218" height="163" key="GridCell.Tab.0.center" timestamp="1583620371945">
+    <state width="1218" height="163" key="GridCell.Tab.0.bottom/0.23.1280.713@0.23.1280.713" timestamp="1583623010022" />
+    <state width="1218" height="163" key="GridCell.Tab.0.center" timestamp="1583623010021">
       <screen x="0" y="23" width="1280" height="713" />
     </state>
-    <state width="1218" height="163" key="GridCell.Tab.0.center/0.23.1280.713@0.23.1280.713" timestamp="1583620371945" />
-    <state width="1218" height="163" key="GridCell.Tab.0.left" timestamp="1583620371944">
+    <state width="1218" height="163" key="GridCell.Tab.0.center/0.23.1280.713@0.23.1280.713" timestamp="1583623010021" />
+    <state width="1218" height="163" key="GridCell.Tab.0.left" timestamp="1583623010021">
       <screen x="0" y="23" width="1280" height="713" />
     </state>
-    <state width="1218" height="163" key="GridCell.Tab.0.left/0.23.1280.713@0.23.1280.713" timestamp="1583620371944" />
-    <state width="1218" height="163" key="GridCell.Tab.0.right" timestamp="1583620371945">
+    <state width="1218" height="163" key="GridCell.Tab.0.left/0.23.1280.713@0.23.1280.713" timestamp="1583623010021" />
+    <state width="1218" height="163" key="GridCell.Tab.0.right" timestamp="1583623010022">
       <screen x="0" y="23" width="1280" height="713" />
     </state>
-    <state width="1218" height="163" key="GridCell.Tab.0.right/0.23.1280.713@0.23.1280.713" timestamp="1583620371945" />
+    <state width="1218" height="163" key="GridCell.Tab.0.right/0.23.1280.713@0.23.1280.713" timestamp="1583623010022" />
   </component>
 </project>
