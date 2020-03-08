@@ -64,7 +64,7 @@
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading" align = "center">UBC Counseling Services</h1>'+
             '<div id="bodyContent" align = "center">'+
-            '<b>Lower Mall</b>'+
+            '<b>Counseling</b>'+
             '<br>Status: By Appointment</br>' +
             'Hours: 8:30 a.m. – 4:30 p.m. daily.'+
             '<p>Phone: (604) 822-3811</p>' +
@@ -84,6 +84,30 @@
           infowindowUBCC.open(map,ubcMarker);
         });
 
+        var contentStringUBCSHS = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading" align = "center">UBC Student Health Services</h1>'+
+            '<div id="bodyContent" align = "center">'+
+            '<b>Psychiatry</b>'+
+            '<br>Status: By Appointment, referral required</br>' +
+            'Hours: 8:00 a.m. – 4:00 p.m. daily.'+
+            '<p>Phone: (604) 822-7011</p>' +
+            '</div>'+
+            '</div>';
+
+        var infowindowUBCSHS = new google.maps.InfoWindow({
+          content: contentStringUBCSHS
+        });
+
+        var ubcSHSMarker = new google.maps.Marker({
+          position: ubcSHS,
+          map: map,
+          title: 'UBC Student Health Services'
+        });
+        ubcSHSMarker.addListener('click', function() {
+          infowindowUBCSHS.open(map,ubcSHSMarker);
+        });
         
       }
     </script>
