@@ -65,6 +65,11 @@
         markerVGH.addListener('click', function () {
             infowindowVGH.open(map, markerVGH);
         });
+        google.maps.event.addListener(map, "click", function(event) {
+          infowindowVGH.close();
+          infowindowUBCC.close();
+          infowindowUBCSHS.close();
+        });
 
         var contentStringUBCC = '<div id="content">' +
             '<div id="siteNotice">' +
