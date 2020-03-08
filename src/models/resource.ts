@@ -62,4 +62,9 @@ Resource.insertMany([
     console.error(`Failed to insert documents: ${e}`)
 });
 
+Resource.find({},['name','location'],  (err, resources) => {
+    console.log(err);
+    console.log(resources)
+    });
+
 export default Resource;

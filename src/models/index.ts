@@ -1,12 +1,13 @@
 import mongoose from 'mongoose';
-// url
-const url = 'mongodb://localhost:27017/';
 
-// Database name
-const dbName = 'cmd2020';
+const curi =  "mongodb+srv://healthpro:goodmind@cluster0-ubsmr.gcp.mongodb.net/cmd2020";
+
+// const connectDb = () => {
+//     return mongoose.connect(url+dbName);
+// };
 
 const connectDb = () => {
-    return mongoose.connect(url+dbName);
+    return mongoose.connect(curi);
 };
 
 export { connectDb };
