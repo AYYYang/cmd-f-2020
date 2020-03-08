@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 const Schema = mongoose.Schema;
 
 const resourceSchema = new Schema({
@@ -63,30 +62,4 @@ Resource.insertMany([
     console.error(`Failed to insert documents: ${e}`)
 });
 
-// did this to test if database worked
-interface IPair {
-    lat: number,
-    lng: number
-}
-
-const myLatLon: IPair[] = [];
-Resource.find({},'location',  (err, resources) => {
-    console.log(err);
-    resources.forEach(element => {
-        // @ts-ignore
-        myLatLon.push({lat:element.location[0], lng:element.location[1]});
-    });
-    console.log(myLatLon);
-});
-
-// let myLatLon = [];
-// Resource.find({}, 'location'
-// ).then((result) => {
-//     myLatLon.push({result});
-//     }
-// ).catch(error => {
-//     console.error(error);
-// });
-
 export default Resource;
-export {myLatLon};
