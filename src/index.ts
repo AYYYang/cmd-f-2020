@@ -19,8 +19,9 @@ app.use(express.static(__dirname + '../public'));
 // define a route handler for the default home page
 app.get("/", async (req, res) => {
     res.render("index");
-    const result: {} = await Resource.find({'name':"UBC Clinic"});
 });
+
+// use the reousrceEndpoints
 app.use("/", resourceEndpoints);
 
 // connect to to database and start the Express server
