@@ -22,17 +22,19 @@
     <div id="map"></div>
     <script>
 
-      // This example displays a marker at the center of Australia.
-      // When the user clicks the marker, an info window opens.
+      // This example displays a markerVGH at the center of Australia.
+      // When the user clicks the markerVGH, an info window opens.
 
       function initMap() {
         var vgh = {lat: 49.261764, lng: -123.1221851};
+        var ubcCounseling = {lat: 49.2602674, lng: -123.25670289999998}
+        var ubcSHS = {lat: 49.2641259, lng: -123.2479528}
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: vgh
         });
 
-        var contentString = '<div id="content">'+
+        var contentStringVGH = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading" align = "center">Vancouver General Hospital</h1>'+
@@ -44,18 +46,45 @@
             '</div>'+
             '</div>';
 
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
+        var infowindowVGH = new google.maps.InfoWindow({
+          content: contentStringVGH
         });
 
-        var marker = new google.maps.Marker({
+        var markerVGH = new google.maps.Marker({
           position: vgh,
           map: map,
           title: 'Vancouver General Hospital'
         });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
+        markerVGH.addListener('click', function() {
+          infowindowVGH.open(map, markerVGH);
         });
+
+        var contentStringUBCC = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading" align = "center">UBC Counseling Services</h1>'+
+            '<div id="bodyContent" align = "center">'+
+            '<b>Lower Mall</b>'+
+            '<br>Status: By Appointment</br>' +
+            'Hours: 8:30 a.m. – 4:30 p.m. daily.'+
+            '<p>Phone: (604) 822-3811</p>' +
+            '</div>'+
+            '</div>';
+
+        var infowindowUBCC = new google.maps.InfoWindow({
+          content: contentStringUBCC
+        });
+
+        var ubcMarker = new google.maps.Marker({
+          position: ubcCounseling,
+          map: map,
+          title: 'UBC Counseling Services'
+        });
+        ubcMarker.addListener('click', function() {
+          infowindowUBCC.open(map,ubcMarker);
+        });
+
+        
       }
     </script>
     <script async defer
