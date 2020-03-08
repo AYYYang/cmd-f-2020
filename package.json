@@ -2,7 +2,7 @@
   "name": "hackthon",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
     "clean": "rimraf dist/*",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -29,6 +29,9 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/mongoose": "^5.7.3",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.9.3"
   }
 }
