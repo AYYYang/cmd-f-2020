@@ -1,149 +1,151 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Mental Health Space</title>
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
     </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
+</head>
+<body>
+<div id="map"></div>
+<script>
 
-      // This example displays a markerVGH at the center of Australia.
-      // When the user clicks the markerVGH, an info window opens.
+    // This example displays a markerVGH at the center of Australia.
+    // When the user clicks the markerVGH, an info window opens.
+    import myLatLon from "../models/renderMarker";
 
-      function initMap() {
-        var center = {lat: 49.263337, lng:  -123.168559};
+    function initMap() {
+        var center = {lat: 49.263337, lng: -123.168559};
         var nest = {lat: 49.2664456, lng: -123.2505028}
         var vgh = {lat: 49.261764, lng: -123.1221851};
         var ubcCounseling = {lat: 49.2602674, lng: -123.25670289999998}
         var ubcSHS = {lat: 49.2641259, lng: -123.2479528}
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: center
+            zoom: 13,
+            center: center
         });
 
-        var contentStringVGH = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading" align = "center">Vancouver General Hospital</h1>'+
-            '<div id="bodyContent" align = "center">'+
-            '<b>Access and Assessment Centre (AAC)</b>'+
+        var contentStringVGH = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<h1 id="firstHeading" class="firstHeading" align = "center">Vancouver General Hospital</h1>' +
+            '<div id="bodyContent" align = "center">' +
+            '<b>Access and Assessment Centre (AAC)</b>' +
             '<br>Status: Accepting Walk-Ins</br>' +
-            'Hours: 7:30 a.m. – 11 p.m. daily.'+
+            'Hours: 7:30 a.m. – 11 p.m. daily.' +
             '<p>Phone: (604) 675-3700</p>' +
-            '</div>'+
+            '</div>' +
             '</div>';
 
         var infowindowVGH = new google.maps.InfoWindow({
-          content: contentStringVGH
+            content: contentStringVGH
         });
 
         var markerVGH = new google.maps.Marker({
-          position: vgh,
-          map: map,
-          title: 'Vancouver General Hospital'
+            position: vgh,
+            map: map,
+            title: 'Vancouver General Hospital'
         });
-        markerVGH.addListener('click', function() {
-          infowindowVGH.open(map, markerVGH);
+        markerVGH.addListener('click', function () {
+            infowindowVGH.open(map, markerVGH);
         });
 
-        var contentStringUBCC = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading" align = "center">UBC Counseling Services</h1>'+
-            '<div id="bodyContent" align = "center">'+
-            '<b>Counseling</b>'+
+        var contentStringUBCC = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<h1 id="firstHeading" class="firstHeading" align = "center">UBC Counseling Services</h1>' +
+            '<div id="bodyContent" align = "center">' +
+            '<b>Counseling</b>' +
             '<br>Status: By Appointment</br>' +
-            'Hours: 8:30 a.m. – 4:30 p.m. daily.'+
+            'Hours: 8:30 a.m. – 4:30 p.m. daily.' +
             '<p>Phone: (604) 822-3811</p>' +
-            '</div>'+
+            '</div>' +
             '</div>';
 
         var infowindowUBCC = new google.maps.InfoWindow({
-          content: contentStringUBCC
+            content: contentStringUBCC
         });
 
         var ubcMarker = new google.maps.Marker({
-          position: ubcCounseling,
-          map: map,
-          title: 'UBC Counseling Services'
+            position: ubcCounseling,
+            map: map,
+            title: 'UBC Counseling Services'
         });
-        ubcMarker.addListener('click', function() {
-          infowindowUBCC.open(map,ubcMarker);
+        ubcMarker.addListener('click', function () {
+            infowindowUBCC.open(map, ubcMarker);
         });
 
-        var contentStringUBCSHS = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading" align = "center">UBC Student Health Services</h1>'+
-            '<div id="bodyContent" align = "center">'+
-            '<b>Psychiatry</b>'+
+        var contentStringUBCSHS = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<h1 id="firstHeading" class="firstHeading" align = "center">UBC Student Health Services</h1>' +
+            '<div id="bodyContent" align = "center">' +
+            '<b>Psychiatry</b>' +
             '<br>Status: By Appointment, referral required</br>' +
-            'Hours: 8:00 a.m. – 4:00 p.m. daily.'+
+            'Hours: 8:00 a.m. – 4:00 p.m. daily.' +
             '<p>Phone: (604) 822-7011</p>' +
-            '</div>'+
+            '</div>' +
             '</div>';
 
         var infowindowUBCSHS = new google.maps.InfoWindow({
-          content: contentStringUBCSHS
+            content: contentStringUBCSHS
         });
 
         var ubcSHSMarker = new google.maps.Marker({
-          position: ubcSHS,
-          map: map,
-          title: 'UBC Student Health Services'
+            position: ubcSHS,
+            map: map,
+            title: 'UBC Student Health Services'
         });
-        ubcSHSMarker.addListener('click', function() {
-          infowindowUBCSHS.open(map,ubcSHSMarker);
+        ubcSHSMarker.addListener('click', function () {
+            infowindowUBCSHS.open(map, ubcSHSMarker);
         });
-        
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-            var myLocation = new google.maps.Marker({
-              position: pos,
-              map: map,
-              icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-          title: 'Current Location'
-        });
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-        
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQGQ1CU9VjLXZ5e2TTbgDrysjTT4xH7_4&callback=initMap">
-    </script>
-  </body>
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var myLocation = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                    title: 'Current Location'
+                });
+            }, function () {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+        }
+
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQGQ1CU9VjLXZ5e2TTbgDrysjTT4xH7_4&callback=initMap">
+</script>
+</body>
 </html>
