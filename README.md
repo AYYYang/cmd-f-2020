@@ -8,8 +8,8 @@ build and run for dev: `npm run dev`
 * data is stored at data.json in ./src/model, there are three samples matching the three locations you have
 * you can insert the data by doing the following after running mongo locally:
 
-`$ use cmd2020`
-`$ db.createCollection('resource')`
+`$ use cmd2020` This creates the database </br>
+`$ db.createCollection('resource')` This creates the collection</br>
 `$ db.resource.insertMany([
   {
     "id": 1,
@@ -51,6 +51,6 @@ build and run for dev: `npm run dev`
       "Psychiatry"
     ]
   }
-])`
+])` This populates it </br>
 
 Have fun :)
