@@ -1,10 +1,10 @@
 # Mental Health Space
 
-👋 If you would like to skip the developer set up, check out the [project overview](https://github.com/AYYYang/cmd-f-2020#Project). 
+👋 If you would like to skip the developer set up, check out the [project overview](https://github.com/AYYYang/cmd-f-2020#Project-Overview). 
 
 Check out our user flow [here](https://marvelapp.com/87ga79h). 
 
-Peep the demo [here](mentalhealthmap.online)!
+Peep the demo [here](http://mentalhealthmap.online/)!
 
 ## Developer Setup 
 
@@ -43,6 +43,10 @@ The idea is that after answering a few simple questions about your demographics,
 
 Our web app will first ask you to take a short quiz: these questions have been researched by us to find the factors that can most affect your match to resources. For example, the first question on the quiz is whether or not you are suicidal. In this case, if you answer yes, we will recommend you seek mental health resources immediately and offer several choices that can give you a prompt response. The next questions are related to age, gender, sexual orientation, etc. 
 
+![alt text](/public/landing.png "Landing Page")
+
 Based on your answers to the quiz, we try to match you with resources that cater to your demographic. For example, there are specialized mental health resources for youth or seniors. There are mental health resources dedicated to only those in the LGBTQ+ committee, who have a much higher mental health risk compared to the general population. 
 
 After the quiz, you will be shown a map with points for our recommendation for where you can seek help. These recommendations are based on your quiz and current location. For future work, we intend to use machine learning models to better predict recommendations based on the resources that similarly assessed people have browsed the most. 
+
+![alt text](/public/map.png "Specialized Resources on Map")
